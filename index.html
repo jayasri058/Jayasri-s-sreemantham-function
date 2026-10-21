@@ -42,6 +42,13 @@
       color: #fffaf1
     }
 
+    .hero {
+      background-color: #4b2035;
+      background-size: cover, 82% auto;
+      background-position: center, center;
+      background-repeat: no-repeat;
+    }
+
     .hero:before,
     .hero:after {
       content: '✿';
@@ -62,13 +69,16 @@
     }
 
     .hero-inner {
+      width: min(100%, 780px);
       max-width: 780px;
       border: 1px solid rgba(231, 199, 125, .8);
-      padding: clamp(28px, 6vw, 64px) clamp(20px, 5vw, 58px);
+      border-radius: 18px;
+      padding: clamp(28px, 5vw, 48px) clamp(20px, 5vw, 58px);
       position: relative;
       z-index: 1;
-      background: rgba(43, 15, 30, .24);
-      backdrop-filter: blur(2px)
+      background: rgba(43, 15, 30, .52);
+      box-shadow: 0 18px 48px rgba(22, 8, 16, .28), inset 0 0 0 5px rgba(231, 199, 125, .08);
+      backdrop-filter: blur(5px)
     }
 
     .eyebrow {
@@ -284,7 +294,16 @@
 
       .hero {
         min-height: 88vh;
-        background-position: center 42%;
+        min-height: 88svh;
+        background-size: cover, 100% auto;
+        background-position: center, center 42%;
+      }
+
+      .hero-inner {
+        width: min(100%, 520px);
+        border-radius: 14px;
+        padding: 30px 20px;
+        background: rgba(43, 15, 30, .62);
       }
 
       section {
